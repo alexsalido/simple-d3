@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-offset-4 col-md-4">
+        <form name="loginForm" novalidate ng-submit=submit(loginForm)>
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" ng-model="user.email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" ng-model="user.password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            <a href="/signup" class="btn btn-info pull-right">Don't have an account?</a>
+        </form>
+    </div>
+</div>

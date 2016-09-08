@@ -1,0 +1,27 @@
+{
+  "name": "simple-chat",
+  "version": "1.0.0",
+  "description": "Simple chat application using Socket.io, Angular and Angular Material",
+  "main": "app.js",
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alejandro Salido",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
+    "express": "^4.14.0",
+    "express-jwt": "^3.4.0",
+    "mongodb": "^2.2.6",
+    "socket.io": "^1.4.8",
+    "socketio-jwt": "^4.5.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-env": "^0.4.4",
+    "grunt-express-server": "^0.5.3"
+  }
+}

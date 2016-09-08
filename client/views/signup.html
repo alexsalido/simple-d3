@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-offset-4 col-md-4">
+        <form name="signupForm" novalidate ng-submit=submit(signupForm)>
+            <h2>Sign Up</h2>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" ng-model="user.email" placeholder="Email" required="required">
+                <div ng-messages="signupForm.email.$error" ng-if="signupForm.email.$touched">
+                    <div ng-message="required" class="alert alert-danger" role="alert">
+                        Required field.
+                    </div>
+                    <div ng-message="email" class="alert alert-danger" role="alert">
+                        Invalid email.
+                    </div>
+                    <div ng-message="dbError" class="alert alert-danger" role="alert">
+                        {{error.message}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" ng-model="user.password" placeholder="Password" required="required">
+                <div ng-messages="signupForm.password.$error" ng-if="signupForm.password.$touched">
+                    <div ng-message="required" class="alert alert-danger" role="alert">
+                        Required field.
+                    </div>
+                    <div ng-message="dbError" class="alert alert-danger" role="alert">
+                        {{error.message}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="confirmation">Password</label>
+                <input type="password" class="form-control" id="confirmation" name="confirmation" ng-model="user.confirmation" placeholder="Password Confirmation" required="required">
+                <div ng-messages="signupForm.confirmation.$error" ng-if="signupForm.confirmation.$touched">
+                    <div ng-message="required" class="alert alert-danger" role="alert">
+                        Required field.
+                    </div>
+                    <div ng-message="invalid" class="alert alert-danger" role="alert">
+                        Password confirmation doesn't match.
+                    </div>
+                    <div ng-message="dbError" class="alert alert-danger" role="alert">
+                        {{error.message}}
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-default" ng-disabled="signupForm.$invalid">Submit</button>
+            <a href="/login" class="btn btn-info pull-right">Already have an account?</a>
+        </form>
+    </div>
+</div>
